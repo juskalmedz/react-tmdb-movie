@@ -25,8 +25,8 @@ const rows = [
 const Pricing = () => {
   const navigate = useNavigate();
 
-  const subcribedOnClickHandler = () => {
-    navigate("/subcribed");
+  const subcribedOnClickHandler = (plans) => {
+    navigate(`/subcribed/${plans}`);
   };
 
   return (
@@ -84,15 +84,28 @@ const Pricing = () => {
             <TableRow>
               <TableCell></TableCell>
               <TableCell align="center">
-                <Button variant="contained" onClick={subcribedOnClickHandler}>
+                <Button
+                  variant="contained"
+                  onClick={() => subcribedOnClickHandler("Bronze")}
+                >
                   Buy now
                 </Button>
               </TableCell>
               <TableCell align="center">
-                <Button variant="contained">Buy now</Button>
+                <Button
+                  variant="contained"
+                  onClick={() => subcribedOnClickHandler("Gold")}
+                >
+                  Buy now
+                </Button>
               </TableCell>
               <TableCell align="center">
-                <Button variant="contained">Buy now</Button>
+                <Button
+                  variant="contained"
+                  onClick={() => subcribedOnClickHandler("Platinum")}
+                >
+                  Buy now
+                </Button>
               </TableCell>
             </TableRow>
           </TableFooter>

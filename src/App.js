@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import MovieList from "./containers/MovieList";
 import Pricing from "./containers/Pricing";
 import theme from "./themes/theme";
+import Subcribed from "./containers/Subcribed";
 
 const App = () => {
   return (
@@ -28,10 +29,7 @@ const App = () => {
             element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>}
           />
           <Route path="pricing" element={<Pricing />} />
-          <Route
-            path="subcribed"
-            element={<Box sx={{ mt: 10 }}>Halaman subcribed</Box>}
-          />
+          <Route path="subcribed/:plan" element={<Subcribed />} />
         </Routes>
       </div>
     </ThemeProvider>

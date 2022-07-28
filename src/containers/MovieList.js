@@ -3,15 +3,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import MovieCard from "../components/MovieCard";
-import fetchedMovies from "../data/fetchedMovies.json";
+// import fetchedMovies from "../data/fetchedMovies.json";
+import tmdb from "../apis/tmdb";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
-  const URL =
-    "https://api.themoviedb.org/3/trending/movie/week?api_key=70e79ce04a3ea177fe15eedfa5c4d6f0";
+  const URL = "trending/movie/week";
   const fetchData = async () => {
-    const response = await axios.get(URL);
-    setMovies(response.data.results);
+    try {
+      const response = await tmdb.get(URL);
+      setMovies(response.data.results);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {

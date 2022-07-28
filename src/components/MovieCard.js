@@ -41,7 +41,7 @@ const MovieCard = ({ movie }) => {
               max={5}
               readOnly
             />
-            <Box sx={{ ml: 2 }}>{movie.vote_average}</Box>
+            <Box sx={{ ml: 2 }}>{movie.vote_average.toFixed(2)}</Box>
           </Box>
         </CardContent>
       </Box>

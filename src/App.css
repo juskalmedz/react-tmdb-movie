@@ -12,3 +12,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.nav-inactive {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.nav-active {
+  color: white;
+  margin-right: 10px;
+}

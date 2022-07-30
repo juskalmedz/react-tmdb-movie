@@ -1,16 +1,16 @@
-import './App.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import "./App.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
-import { Box, ThemeProvider } from '@mui/material';
-import { Route, Routes } from 'react-router-dom';
+import { Box, ThemeProvider } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
 
-import Navbar from './components/Navbar';
-import MovieList from './containers/MovieList';
-import Pricing from './containers/Pricing';
-import theme from './themes/theme';
+import Navbar from "./components/Navbar";
+import MovieList from "./containers/MovieList";
+import Pricing from "./containers/Pricing";
+import theme from "./themes/theme";
 
 const App = () => {
   return (
@@ -19,13 +19,23 @@ const App = () => {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<MovieList />} />
-          <Route path="about" element={<Box sx={{ mt: 10 }}>Halaman about</Box>} />
-          <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>} />
+          <Route
+            path="about"
+            element={<Box sx={{ mt: 10 }}>Halaman about</Box>}
+          />
+          <Route
+            path="indonesian"
+            element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>}
+          />
           <Route path="pricing" element={<Pricing />} />
+          <Route
+            path="subcribed"
+            element={<Box sx={{ mt: 10 }}>Thank for subricibing!</Box>}
+          />
         </Routes>
       </div>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

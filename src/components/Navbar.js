@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 // const navItems = ['Indonesian', 'Pricing', 'About'];
 const navItems = [
@@ -31,7 +31,9 @@ const Navbar = () => {
               letterSpacing: ".3rem",
             }}
           >
-            NONTON
+            <Link className="logo-text" to="/">
+              NONTON
+            </Link>
           </Typography>
           <Box sx={{ display: "block" }}>
             {navItems.map((item) => (
